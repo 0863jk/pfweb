@@ -1,0 +1,14 @@
+.Footer {
+    width: 100%;
+    height: 150px;
+}
+
+.TextContext {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align-last: center;
+    text-align: center;
+    -ms-text-align-last: center;
+    -moz-text-align-last: center;
+    vertical-align: middle;
+}

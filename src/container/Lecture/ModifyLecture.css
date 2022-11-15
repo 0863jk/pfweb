@@ -1,0 +1,70 @@
+.MainContainer {
+    background-color: white;
+    width: 100%;
+}
+
+.FormGroup {
+    margin-bottom: 10px;
+}
+
+.LabelWrapper {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-left: 1rem;
+}
+
+.LabelWrapper label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.FormContainer {
+    margin-top: 30px;
+    display: table;
+    background-color: white;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.SelectContainer {
+    display: flex;
+}
+
+.SelectContainerLeft {
+    width: 395px;
+    margin-right: 5px;
+}
+
+.SelectContainerCenter {
+    width: 395px;
+    margin: auto;
+}
+
+.SelectContainerRight {
+    width: 395px;
+    margin-left: 5px;
+}
+
+.BtnContainer {
+    text-align-last: center;
+    text-align: center;
+    -ms-text-align-last: center;
+    -moz-text-align-last: center;
+}
+
+.SubmitBtnContainer {
+    text-align-last: center;
+    text-align: center;
+    -ms-text-align-last: center;
+    -moz-text-align-last: center;
+}
+
+.BtnContainer Button {
+    width: 1200px;
+}
+
+.LastFormGroup {
+    margin-bottom: 30px;
+}

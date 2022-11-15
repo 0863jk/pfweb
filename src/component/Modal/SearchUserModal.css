@@ -1,0 +1,60 @@
+.bodyContainer {
+    display: flex;
+    height: 300px;
+}
+
+.searchContainer {
+    width: 60%;
+}
+
+.memberContainer {
+    width: 40%;
+}
+
+.formContainer {
+    margin: 5px;
+}
+
+.itemContainer {
+    display: block;
+    align-items: center;
+    overflow:auto;
+    height:262px;
+}
+
+.memberContainer {
+    text-align: center;
+    overflow:auto;
+    height:262px;
+}
+
+.btnContainer {
+    display: flex;
+    text-align: center;
+}
+
+.items {
+    width: 200px;
+}
+
+Table {
+    text-align: center;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.selectedMembers {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    max-width: 250px;
+    width: 100%;
+}
+
+li {
+    margin: 3px;
+}

@@ -1,0 +1,138 @@
+.MainContainer {
+    background-color: white;
+    width: 100%;
+}
+
+.ProfileContainer{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.ProfileWrapper{
+    width: 400px;
+    height: 900px;
+    float: left;
+    padding-right: 20px;
+    border-right: 1px solid lightgray
+}
+
+.ProfileImgWarpper{
+    display: flex;
+    justify-content: center;
+}
+
+.ProfileImgWarpper > img{
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+    border : 1.5px solid black;
+    background-color: white;
+}
+
+.ProfileInfoContainer {
+    margin: 15px;
+    text-align: center;
+}
+
+.ProfileInfo {
+    margin: 10px;
+}
+
+.ProfileInfo label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.NameAndIntro{
+    padding-right: 5px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    position: relative;
+
+}
+
+.NameAndIntro h2{
+    display: inline;
+}
+
+.UserDetail dd > span{
+    display: block;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgray;
+}
+
+.NameAndIntro .btnWrapper {
+    position: absolute;
+    top : 10px;
+    right: 15px;
+}
+
+
+.NameAndIntro .btnWrapper img {
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+}
+
+.UserDetail dt:first-child {
+    margin-top: 30px;
+}
+
+.UserDetail dd{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 40px;
+}
+
+.PortfolioWrapper {
+    justify-content: center;
+    display: table-cell;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.Portfolios{
+    width: 1200px;
+    float: center;
+    display:flex;
+    justify-content: center;
+    flex-wrap : wrap;
+}
+
+.ViewMoreWrapper{
+    margin-bottom: 7px;
+    margin-right: 45px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.UserPost{
+    width: 100%;
+    height: 500px;
+    background-color: green;
+    float: left;
+}
+
+.LectureContainer {
+    display: table-cell;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.LectureList {
+    list-style:none;
+}

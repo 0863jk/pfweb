@@ -1,0 +1,21 @@
+.titleContainer {
+    display: table-cell;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.contentContainer {
+    display: table-cell;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+}
+.EmptyDataContainer {
+    margin: 150px;
+    text-align: center;
+}
+.EmptyDataContainer label {
+    font-size: 20px;
+    font-weight: bold;
+}

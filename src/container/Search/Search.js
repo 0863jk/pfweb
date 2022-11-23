@@ -1,15 +1,15 @@
 import "./Search.css";
-import Dropdown from "../component/Dropdown.js";
+
+import Dropdown from "../../Component/Dropdown";
 import { useEffect, useState } from "react";
-import Portfolio from "../component/Portfolio";
+import Portfolio from "../../Component/Portfolio/Portfolio";
 import { useNavigate, useLocation } from "react-router-dom";
-import Paginaiton from "../component/Pagination";
+import Paginaiton from "../../Component/Pagination";
 
 function Search(props) {
 
     const location = useLocation();
     useEffect(() => {
-
         console.log(location);
     }, [location])
 

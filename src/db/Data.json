@@ -2,38 +2,38 @@
     "user": [
         {
             "id": "a1",
-            "schoolid": 202045001,
+            "schoolid": "202045001",
             "name": "홍길동"
         },
         {
             "id": "b2",
-            "schoolid": 202045002,
-            "name": "전영현"
+            "schoolid": "202045002",
+            "name": "김길동"
         },
         {
             "id": "c3",
-            "schoolid": 202045003,
-            "name": "박희환"
+            "schoolid": "202045003",
+            "name": "박길동"
         },
         {
             "id": "d4",
-            "schoolid": 202045004,
-            "name": "유경완"
+            "schoolid": "202045004",
+            "name": "최길동"
         },
         {
             "id": "e5",
-            "schoolid": 202045005,
-            "name": "오윤아"
+            "schoolid": "202045005",
+            "name": "이길동"
         },
         {
             "id": "f6",
-            "schoolid": 202045006,
-            "name": "유채이"
+            "schoolid": "202045006",
+            "name": "유길동"
         },
         {
             "id": "g7",
-            "schoolid": 202045007,
-            "name": "장윤성"
+            "schoolid": "202045007",
+            "name": "장길동"
         }
     ],
     "semester": [
@@ -67,7 +67,7 @@
             "id": 1,
             "title": "심화캡스톤디자인",
             "professor": "김철진",
-            "semesterId": 31,
+            "semesterId": 1,
             "grade": 3,
             "semester": "2022년 2학기"
         },
@@ -75,7 +75,7 @@
             "id": 2,
             "title": "디지털공학응용",
             "professor": "이재춘",
-            "semesterId": 31,
+            "semesterId": 1,
             "grade": 3,
             "semester": "2022년 2학기"
         },
@@ -83,7 +83,7 @@
             "id": 3,
             "title": "AI영상처리",
             "professor": "권두순",
-            "semesterId": 31,
+            "semesterId": 1,
             "grade": 3,
             "semester": "2022년 2학기"
         },
@@ -91,7 +91,7 @@
             "id": 4,
             "title": "머신러닝응용",
             "professor": "김태령",
-            "semesterId": 31,
+            "semesterId": 1,
             "grade": 3,
             "semester": "2022년 2학기"
         },
@@ -99,7 +99,7 @@
             "id": 5,
             "title": "운영체제",
             "professor": "박경호",
-            "semesterId": 31,
+            "semesterId": 1,
             "grade": 3,
             "semester": "2022년 2학기"
         },
@@ -107,7 +107,7 @@
             "id": 6,
             "title": "머신러닝 기초",
             "professor": "이세훈",
-            "semesterId": 32,
+            "semesterId": 2,
             "grade": 3,
             "semester": "2022년 1학기"
         },
@@ -115,7 +115,7 @@
             "id": 7,
             "title": "자율드론",
             "professor": "박병섭",
-            "semesterId": 32,
+            "semesterId": 2,
             "grade": 3,
             "semester": "2022년 1학기"
         },
@@ -123,7 +123,7 @@
             "id": 8,
             "title": "웹 보안",
             "professor": "용승림",
-            "semesterId": 32,
+            "semesterId": 2,
             "grade": 3,
             "semester": "2022년 1학기"
         },
@@ -131,7 +131,7 @@
             "id": 9,
             "title": "소프트웨어분석설계",
             "professor": "김철진",
-            "semesterId": 32,
+            "semesterId": 2,
             "grade": 3,
             "semester": "2022년 1학기"
         },
@@ -139,7 +139,7 @@
             "id": 10,
             "title": "디지털공학",
             "professor": "이재춘",
-            "semesterId": 32,
+            "semesterId": 2,
             "grade": 3,
             "semester": "2022년 1학기"
         },
@@ -147,7 +147,7 @@
             "id": 11,
             "title": "파이선프로그래밍",
             "professor": "박경호",
-            "semesterId": 16,
+            "semesterId": 6,
             "grade": 2,
             "semester": "2020년 1학기"
         },
@@ -155,7 +155,7 @@
             "id": 12,
             "title": "엑셀활용",
             "professor": "육계산",
-            "semesterId": 16,
+            "semesterId": 6,
             "grade": 1,
             "semester": "2020년 1학기"
         },
@@ -163,7 +163,7 @@
             "id": 13,
             "title": "기초전자개론",
             "professor": "허민",
-            "semesterId": 16,
+            "semesterId": 6,
             "grade": 1,
             "semester": "2020년 1학기"
         },
@@ -171,7 +171,7 @@
             "id": 14,
             "title": "참인성대학생활",
             "professor": "박병섭",
-            "semesterId": 16,
+            "semesterId": 6,
             "grade": 1,
             "semester": "2020년 1학기"
         },
@@ -179,7 +179,7 @@
             "id": 15,
             "title": "C프로그래밍",
             "professor": "황수철",
-            "semesterId": 16,
+            "semesterId": 6,
             "grade": 1,
             "semester": "2020년 1학기"
         },
@@ -187,7 +187,7 @@
             "id": 16,
             "title": "인성과리더쉽",
             "professor": "이상란",
-            "semesterId": 16,
+            "semesterId": 6,
             "grade": 1,
             "semester": "2020년 1학기"
         },
@@ -195,7 +195,7 @@
             "id": 17,
             "title": "정보보안개론",
             "professor": "송은하",
-            "semesterId": 16,
+            "semesterId": 6,
             "grade": 1,
             "semester": "2020년 1학기"
         },
@@ -203,7 +203,7 @@
             "id": 18,
             "title": "영어회화",
             "professor": "로라",
-            "semesterId": 15,
+            "semesterId": 5,
             "grade": 1,
             "semester": "2020년 2학기"
         },
@@ -211,7 +211,7 @@
             "id": 19,
             "title": "디지털논리회로",
             "professor": "허민",
-            "semesterId": 15,
+            "semesterId": 5,
             "grade": 1,
             "semester": "2020년 2학기"
         },
@@ -219,7 +219,7 @@
             "id": 20,
             "title": "C++프로그래밍",
             "professor": "황수철",
-            "semesterId": 15,
+            "semesterId": 5,
             "grade": 1,
             "semester": "2020년 2학기"
         },
@@ -227,7 +227,7 @@
             "id": 21,
             "title": "웹프로그래밍",
             "professor": "전혜경",
-            "semesterId": 15,
+            "semesterId": 5,
             "grade": 1,
             "semester": "2020년 2학기"
         },
@@ -235,7 +235,7 @@
             "id": 22,
             "title": "JAVA프로그래밍",
             "professor": "김기태",
-            "semesterId": 15,
+            "semesterId": 5,
             "grade": 1,
             "semester": "2020년 2학기"
         },
@@ -243,7 +243,7 @@
             "id": 23,
             "title": "IoT개론",
             "professor": "정영호",
-            "semesterId": 15,
+            "semesterId": 5,
             "grade": 1,
             "semester": "2020년 2학기"
         },
@@ -251,7 +251,7 @@
             "id": 24,
             "title": "모바일프로그래밍",
             "professor": "서지훈",
-            "semesterId": 24,
+            "semesterId": 4,
             "grade": 2,
             "semester": "2021년 1학기"
         },
@@ -259,7 +259,7 @@
             "id": 25,
             "title": "JAVA프로그래밍응용",
             "professor": "서지훈",
-            "semesterId": 24,
+            "semesterId": 4,
             "grade": 2,
             "semester": "2021년 1학기"
         },
@@ -267,7 +267,7 @@
             "id": 26,
             "title": "IoT임베디드",
             "professor": "이세훈",
-            "semesterId": 24,
+            "semesterId": 4,
             "grade": 2,
             "semester": "2021년 1학기"
         },
@@ -275,7 +275,7 @@
             "id": 27,
             "title": "데이터통신",
             "professor": "정영호",
-            "semesterId": 24,
+            "semesterId": 4,
             "grade": 2,
             "semester": "2021년 1학기"
         },
@@ -283,7 +283,7 @@
             "id": 28,
             "title": "C#프로그래밍",
             "professor": "전혜경",
-            "semesterId": 24,
+            "semesterId": 4,
             "grade": 2,
             "semester": "2021년 1학기"
         },
@@ -291,7 +291,7 @@
             "id": 29,
             "title": "데이터베이스",
             "professor": "박혜영",
-            "semesterId": 24,
+            "semesterId": 4,
             "grade": 2,
             "semester": "2021년 1학기"
         },
@@ -299,7 +299,7 @@
             "id": 30,
             "title": "컴퓨터구조",
             "professor": "정찬웅",
-            "semesterId": 24,
+            "semesterId": 4,
             "grade": 2,
             "semester": "2021년 1학기"
         },
@@ -307,7 +307,7 @@
             "id": 31,
             "title": "시스템보안",
             "professor": "용승림",
-            "semesterId": 23,
+            "semesterId": 3,
             "grade": 2,
             "semester": "2021년 2학기"
         },
@@ -315,7 +315,7 @@
             "id": 32,
             "title": "데이터베이스설계및응용",
             "professor": "박혜영",
-            "semesterId": 23,
+            "semesterId": 3,
             "grade": 2,
             "semester": "2021년 2학기"
         },
@@ -323,7 +323,7 @@
             "id": 33,
             "title": "마이크로프로세서",
             "professor": "정찬웅",
-            "semesterId": 23,
+            "semesterId": 3,
             "grade": 2,
             "semester": "2021년 2학기"
         },
@@ -331,7 +331,7 @@
             "id": 34,
             "title": "서버구축관리",
             "professor": "김철진",
-            "semesterId": 23,
+            "semesterId": 3,
             "grade": 2,
             "semester": "2021년 2학기"
         },
@@ -339,7 +339,7 @@
             "id": 35,
             "title": "모바일프로그래밍응용",
             "professor": "서지훈",
-            "semesterId": 23,
+            "semesterId": 3,
             "grade": 2,
             "semester": "2021년 2학기"
         }

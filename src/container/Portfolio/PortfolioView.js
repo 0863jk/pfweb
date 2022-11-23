@@ -1,6 +1,6 @@
 import "./PortfolioView.css"
-import Tag from "../../component/Tag.js";
-import Comment from "../../component/Comment.js";
+import Tag from "../../Component/Tag.js";
+import Comment from "../../Component/Comment/Comment.js";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";

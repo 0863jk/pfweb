@@ -1,4 +1,4 @@
-import Lecture from "../../component/LectureEdit";
+import Lecture from "../../Component/Lecture/LectureEdit";
 import useFetch from "../../Hook/useFetch";
 
 export default function ManageLecture() {

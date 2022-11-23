@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Main.css"
-import Portfolio from "../../component/Portfolio.js";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import { call } from "../../Hook/ApiService";
 import { pdfjs } from "react-pdf";
-import Lecture from "../../component/Lecture";
+import Lecture from "../../Component/Lecture/Lecture";
 import useFetch from "../../Hook/useFetch";
 
 
@@ -14,7 +13,7 @@ function Main() {
     // const [num, setNum] = useState(0);
     // const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const lecture = useFetch(`http://localhost:3001/lecture?semesterId=31`);
+    const lecture = useFetch(`http://localhost:3001/lecture?semesterId=1`);
 
     // useEffect(() => {
     //     axios.get(`http://localhost:8080/portfolio/list`)

@@ -1,20 +1,20 @@
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import Profile from './container/Profile/Profile';
-import Footer from './component/Footer';
-import BasicExample from './component/Header';
-import Header from './component/Header';
-import Main from './container/Main/Main';
-import SortByGrade from './container/SortByGrade';
-import CreateLecture from './container/Lecture/CreateLecture';
-import ManageLecture from './container/Lecture/ManageLecture';
-import Search from './container/Search';
-import PortfolioView from './container/Portfolio/PortfolioView';
-import WritePortfolio from './container/Portfolio/WritePortfollio'
-import ManagePortfolio from './container/Portfolio/ManagePortfolio'
-import PortfolioList from './container/Lecture/PortfolioList';
-import ModifyLecture from './container/Lecture/ModifyLecture';
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Header from './Component/Header';
+import Main from "./Container/Main/Main";
+import Profile from "./Container/Profile/Profile";
+import SortByGrade from "./Container/SortBy/SortByGrade";
+import CreateLecture from "./Container/Lecture/CreateLecture";
+import ModifyLecture from "./Container/Lecture/ModifyLecture";
+import ManageLecture from "./Container/Lecture/ManageLecture";
+import Search from "./Container/Search/Search";
+import PortfolioList from "./Container/Portfolio/PortfolioList";
+import PortfolioView from "./Container/Portfolio/PortfolioView copy";
+import WritePortfolio from "./Container/Portfolio/WritePortfolio";
+import ManagePortfolio from "./Container/Portfolio/ManagePortfolio";
+import ModifyPortfolio from "./Container/Portfolio/ModifyPortfolio";
+import Footer from "./Component/Footer";
 
 function App() {
   return (
@@ -39,6 +39,7 @@ function App() {
             <Route path="/portfolio/:pfid" element={<PortfolioView />}></Route>
             <Route path="/portfolio/write" element={<WritePortfolio />}></Route>
             <Route path="/portfolio/manage" element={<ManagePortfolio />}></Route>
+            <Route path="/portfolio/modify/:pfid" element={<ModifyPortfolio />}></Route>
             {/*
 
 

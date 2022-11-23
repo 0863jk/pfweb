@@ -1,18 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import useFetch from '../../Hook/useFetch';
 import "./CreateLecture.css";
-import Modal from "../../component/Modal/SearchUserModal";
+import Modal from "../../Component/Modal/SearchUserModal";
 
 export default function CreateLecture() {
     const semesters = useFetch(`http://localhost:3001/semester`);
+    const [members, setMembers] = useState([]);
 
-    const [popup, setPopup] = useState({ open: false, title: "", message: "", callback: false });
+    const [popup, setPopup] = useState({ open: false });
 
     const [dto, setDto] = useState({
 
     })
+
+    const setData = (data) => {
+        setMembers(data);
+    }
 
     const onClick = (e) => {
         setPopup({
@@ -29,6 +34,10 @@ export default function CreateLecture() {
         })
         console.log(dto);
     }
+    
+    useEffect(() => {
+        console.log({members});
+    }, [members])
 
     return (
         <div className="MainContainer">
@@ -50,7 +59,7 @@ export default function CreateLecture() {
                                     <option value="3학년">3학년</option>
                                 </Form.Select>
                             </div>
-                            <div className="SelectContainerCenter">
+                            <div className="SelectContainerRight">
                                 <Form.Select name="semester" aria-label="Semester Select" onChange={getValue}>
                                     <option value="DEFAULT">
                                         학기 선택
@@ -60,13 +69,6 @@ export default function CreateLecture() {
                                             {semester.semester}
                                         </option>
                                     ))}
-                                </Form.Select>
-                            </div>
-                            <div className="SelectContainerRight">
-                                <Form.Select name="project type" aria-label="Semester Select" onChange={getValue}>
-                                    <option value="DEFAULT">프로젝트 유형 선택</option>
-                                    <option value="개인 프로젝트">개인 프로젝트</option>
-                                    <option value="팀 프로젝트">팀 프로젝트</option>
                                 </Form.Select>
                             </div>
                         </div>
@@ -89,7 +91,7 @@ export default function CreateLecture() {
                 </Form>
             </div>
             <div>
-                <Modal open={popup.open} setPopup={setPopup} message={popup.message} title={popup.title} callback={popup.callback} />
+                <Modal open={popup.open} setPopup={setPopup} message={popup.message} title={popup.title} callback={popup.callback} setData={setData} />
             </div>
         </div>
     );

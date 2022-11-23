@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/esm/Button";
 import { Link, useParams } from "react-router-dom";
-import useFetch from "../Hook/useFetch";
+import useFetch from "../../Hook/useFetch";
 import "./LectureEdit.css";
 
 function OnClick() {

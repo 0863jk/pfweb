@@ -1,42 +1,40 @@
-import { Navigate, useParams } from "react-router-dom";
-import Lecture from "../component/Lecture";
-import useFetch from "../Hook/useFetch";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import Lecture from "../../Component/Lecture/Lecture";
+import useFetch from "../../Hook/useFetch";
 import "./SortByGrade.css";
-import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
-import Select from 'react-select';
 import { useEffect, useRef, useState } from "react";
+import Form from 'react-bootstrap/Form';
 
-const onChange = (event) => {
-	// event handler
-	console.log(event.target.value);
-};
-
-function SemesterButton() {
+function SemesterSelect() {
 	const { pGrade } = useParams();
 	const { pSemester } = useParams();
 	const [grade, setGrade] = useState();
 	const [semester, setSemester] = useState();
 	const semesters = useFetch(`http://localhost:3001/semester`);
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		setGrade(pGrade);
+		setSemester(pSemester);
 		console.log(grade);
-	}, [])
+	}, [pGrade])
+
+	const onChange = (e) => {
+		console.log("onChange ", e.target.value);
+		navigate(`/grade/${grade}/${e.target.value}`);
+	};
 
 	return (
-		<ButtonToolbar aria-label="Toolbar with button groups">
-			<ButtonGroup className="me-2" aria-label="First group">
-				{semesters && semesters.map(semester => (
-					<Button key={semester.id} variant="secondary" onClick={() => {
-						window.location.replace(`/grade/${grade}/${grade}${semester.id}`);
-					}}>
-						{semester.semester}
-					</Button>
-				))}
-			</ButtonGroup>
-		</ButtonToolbar>
+		<Form.Select aria-label="Default select example" onChange={onChange}>
+			<option value="default">
+				학기 선택
+			</option>
+			{semesters && semesters.map(semester => (
+				<option value={semester.id} key={semester.id}>
+					{semester.semester}
+				</option>
+			))}
+		</Form.Select>
 	);
 }
 
@@ -46,12 +44,17 @@ export default function SortByGrade() {
 	const [semester, setSemester] = useState();
 	const [lecture, setLecture] = useState();
 	const [isLoaded, setIsLoaded] = useState(false);
-	// const lecture = useFetch(`http://localhost:3001/lecture?grade=${grade}`);
+
+	const location = useLocation();
 
 	useEffect(() => {
 		setGrade(pGrade);
 		setSemester(pSemester);
-	}, [])
+	}, [pGrade, pSemester]);
+
+	useEffect(() => {
+		console.log(location);
+	}, [location])
 
 	useEffect(() => {
 		if (isLoaded) {
@@ -82,7 +85,9 @@ export default function SortByGrade() {
 	return (
 		<div className="MainContainer">
 			<div className="GradeContainer">
-				<SemesterButton grade={grade} />
+				<div className="SemesterSelect">
+					<SemesterSelect grade={grade} />
+				</div>
 			</div>
 			<div className="LectureContainer">
 				{

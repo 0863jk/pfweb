@@ -6,7 +6,7 @@ import useFetch from '../../Hook/useFetch';
 import "./SearchUserModal.css";
 import Table from 'react-bootstrap/Table';
 
-function Popup({ open, setPopup, callback }) {
+function Popup({ open, setPopup, callback, setData }) {
     // const [dto, setDto] = useState({
 
     // })
@@ -17,7 +17,10 @@ function Popup({ open, setPopup, callback }) {
     const [checkedItems, setCheckedItems] = useState(new Set());
     const [bChecked, setChecked] = useState(false);
 
+    const [input, setInput] = useState([]);
+
     const handleClose = () => {
+        setData({input});
         setPopup({ open: false });
         if (callback) {
             callback();
@@ -34,33 +37,41 @@ function Popup({ open, setPopup, callback }) {
         }
     };
 
-    const checkHandler = ({ target }) => {
+    const checkHandler = ({ target }, { user }) => {
         if (target.checked === true) {
             const li = document.createElement("li");
-            li.setAttribute('id', target.value);
-            const textNode = document.createTextNode(target.value);
+            li.setAttribute('id', user.id);
+            li.setAttribute('key', user.id);
+            const textNode = document.createTextNode(user.name);
             li.appendChild(textNode);
             document
                 .getElementById('selectedMembers')
                 .appendChild(li);
+            const newUser = {
+                'id': user.id,
+                'name': user.name
+            };
+            setInput([...input, newUser]);
         } else if (target.checked === false) {
             const ul = document
-                .getElementById('selectedMembers');
-            const items = document.getElementById(target.value);
+            .getElementById('selectedMembers');
+            const items = document.getElementById(user.id);
             if (items !== undefined) {
                 items.remove();
+                setInput(input.filter(input => input.id !== user.id));
             }
         }
+        console.log({input});
         setChecked(!bChecked);
         checkedItemHandler(target.value, target.checked);
-        console.log(target.value, target.checked);
     };
 
-    const addList = ({ target }) => {
+    const addList = ({ target }, { user }) => {
         if (bChecked === true) {
             const li = document.createElement("li");
-            li.setAttribute('id', target.value);
-            const textNode = document.createTextNode(target.value);
+            li.setAttribute('id', user.id);
+            li.setAttribute('key', user.id);
+            const textNode = document.createTextNode(user.name);
             li.appendChild(textNode);
             document
                 .getElementById('selectedMembers')
@@ -82,13 +93,9 @@ function Popup({ open, setPopup, callback }) {
         console.log(e.target.value);
     };
 
-    function parentCall() {
-        
-    }
-
     return (
         <>
-            <Modal show={open} onHide={handleClose}>
+            <Modal show={open} onHide={handleClose} size='lg'>
                 <Modal.Header closeButton>
                     <Modal.Title>구성원 선택</Modal.Title>
                 </Modal.Header>
@@ -114,7 +121,7 @@ function Popup({ open, setPopup, callback }) {
                                                 <td>{user.schoolid}</td>
                                                 <td>{user.name}</td>
                                                 <td>{user.id}</td>
-                                                <td><input value={user.name} type="checkbox" onChange={(e) => checkHandler(e)} /></td>
+                                                <td><input value={user.name} type="checkbox" onChange={(e) => checkHandler(e, {user})} /></td>
                                             </tr>
                                         ))}
                                     </tbody>
@@ -140,7 +147,7 @@ function Popup({ open, setPopup, callback }) {
                         </div>
                         <div className="memberContainer">
                             <label className="title">
-                                추가된 멤버 목록
+                                추가된 멤버
                             </label>
                             <ul id="selectedMembers">
                             </ul>

@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import useFetch from '../../Hook/useFetch';
 import "./CreateLecture.css";
-import Modal from "../../component/Modal/SearchUserModal";
+import Modal from "../../Component/Modal/SearchUserModal";
 
 export default function ModifyLecture() {
     const semesters = useFetch(`http://localhost:3001/semester`);

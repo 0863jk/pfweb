@@ -1,9 +1,8 @@
 import { useEffect } from "react"
 import { useState } from "react"
 import { Link, useParams } from "react-router-dom"
-import Lecture from "../../component/LectureInfo"
-import Portfolio from "../../component/Portfolio"
-import useFetch from "../../Hook/useFetch"
+import Lecture from "../../Component/Lecture/LectureInfo"
+import Portfolio from "../../Component/Portfolio/Portfolio"
 import "./PortfolioList.css"
 
 export default function PortfolioList(props) {
@@ -61,7 +60,7 @@ export default function PortfolioList(props) {
                         <div className="folioContainer">
                             {
                                 portfolio && portfolio.map(pf => (
-                                    <Link to={`portfolio/${pf.pfId}`} style={{ color: "black", textDecoration: "none" }}>
+                                    <Link to={`/portfolio/${pf.pfId}`} style={{ color: "black", textDecoration: "none" }}>
                                         <Portfolio title={pf.title} summary={pf.summary} tags={pf.tags} userId={pf.userId} like={pf.like} view={pf.view} img=""></Portfolio>
                                     </Link>
                                 ))}

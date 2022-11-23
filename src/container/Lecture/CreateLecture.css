@@ -33,17 +33,12 @@
 }
 
 .SelectContainerLeft {
-    width: 395px;
+    width: 50%;
     margin-right: 5px;
 }
 
-.SelectContainerCenter {
-    width: 395px;
-    margin: auto;
-}
-
 .SelectContainerRight {
-    width: 395px;
+    width: 50%;
     margin-left: 5px;
 }
 

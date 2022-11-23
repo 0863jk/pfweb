@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Portfolio.css"
-import Tag from "./Tag";
+import Tag from "../Tag";
 
 
 function Portfolio(props) {

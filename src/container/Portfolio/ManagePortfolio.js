@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import Portfolio from "../../component/Portfolio"
+import Portfolio from "../../Component/Portfolio/PortfolioEdit"
 import useFetch from "../../Hook/useFetch"
 
 export default function ManagePortfolio() {
@@ -10,9 +10,7 @@ export default function ManagePortfolio() {
             <div className="folioContainer">
                 {
                     portfolio && portfolio.map(pf => (
-                        <Link to={`portfolio/${pf.pfId}`} style={{ color: "black", textDecoration: "none" }}>
-                            <Portfolio title={pf.title} summary={pf.summary} tags={pf.tags} userId={pf.userId} like={pf.like} view={pf.view} img=""></Portfolio>
-                        </Link>
+                            <Portfolio title={pf.title} summary={pf.summary} tags={pf.tags} userId={pf.userId} like={pf.like} view={pf.view} img="" pfId={pf.pfId}></Portfolio>
                     ))
                 }
             </div>

@@ -1,8 +1,8 @@
 import "./PortfolioView.css"
-import Tag from "../../component/Tag.js";
-import Comment from "../../component/Comment.js";
-import PdfViewer from "../../component/PdfViewer/PdfViewer";
-import MessageMoadalbtn from "../../component/Message/MessageModalBtn";
+import Tag from "../../Component/Tag.js";
+import Comment from "../../Component/Comment.js";
+import PdfViewer from "../../Component/PdfViewer/PdfViewer";
+import MessageMoadalbtn from "../../Component/Message/MessageModalBtn";
 
 function PortfolioView(props) {
 

@@ -5,7 +5,7 @@ import Header from './Component/Header';
 import Main from "./Container/Main/Main";
 import Profile from "./Container/Profile/Profile";
 import SortByGrade from "./Container/SortBy/SortByGrade";
-import CreateLecture from "./Container/Lecture/CreateLecture";
+import CreateLecture from "./Container/Lecture/CreateLecture copy2";
 import ModifyLecture from "./Container/Lecture/ModifyLecture";
 import ManageLecture from "./Container/Lecture/ManageLecture";
 import Search from "./Container/Search/Search";

@@ -8,15 +8,12 @@ function OnClick() {
 };
 
 export default function Lecture(props) {
-    //    const { title, professor, semester } = useParams();
-    //    const lectures = useFetch(`http://localhost:3001/lecture?grade=${grade}`)
     return (
         <div>
             <div className="lecture">
                 <div className="info">
-                    <img className="icon" src="https://via.placeholder.com/100x100" alt="non-image" />
                     <div className="lectureInfo">
-                        <Link to="/lecture/lid" className="lectureName">{props.title}</Link><br></br>
+                        <Link to={`/lecture/${props.id}`} className="lectureName">{props.title}</Link><br></br>
                         <label className="professor">{props.professor} 교수님</label>
                         <label className="semester">{props.semester}</label>
                     </div>

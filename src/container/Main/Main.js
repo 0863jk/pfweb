@@ -1,38 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Main.css"
 import { Link } from 'react-router-dom';
-import axios from "axios";
-import { call } from "../../Hook/ApiService";
-import { pdfjs } from "react-pdf";
-import Lecture from "../../Component/Lecture/Lecture";
+import Lecture from "../../Component/Lecture/Lecture copy.js";
 import useFetch from "../../Hook/useFetch";
 
-
-
 function Main() {
-    // const [num, setNum] = useState(0);
-    // const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const lecture = useFetch(`http://localhost:3001/lecture?semesterId=1`);
-
-    // useEffect(() => {
-    //     axios.get(`http://localhost:8080/portfolio/list`)
-    //         .then((response) => {
-    //             console.log(response)
-    //             setData(response.data.content);
-    //         })
-    //         .catch(error => console.log(error))
-    // }, [])
-
-    // useEffect(() => {
-    //     call("/portfolio/list", "GET", null)
-    //         .then((response) => {
-    //             setData(response.content)
-    //             setIsLoading(false)
-    //         })
-    //         .catch((error) => console.log(error))
-    // }, []);
-    // console.log(data);
+    const lecture = useFetch(`http://localhost:3001/lecture?semesterId=202202`);
 
     const CarouselRef = useRef();                                   //Carousel DOM을 접근하기 위함
     const [CarouselWidth, setCarouselWidth] = useState(0);
@@ -41,17 +15,12 @@ function Main() {
     const CarouselImgWidth = 360;
     const CarouselImgMargin = 30;
 
-
-
-
     //첫 렌더링(페이지 방문)시 Carosel 크기 지정
     useEffect(() => {
         const count = CarouselRef.current.childNodes.length;
         CarouselRef.current.style.width = (CarouselImgWidth + CarouselImgMargin) * count + "px";
         setCarouselCount(count);
     }, [CarouselIdx])
-
-
 
     //Carosel 좌우 버튼 누를 시 기능
     function moveCarousel(idx) {
@@ -109,16 +78,23 @@ function Main() {
                 <label>나의 강의</label>
             </div>
             <div className="LectureContainer">
-				<ul className="LectureList">
-					<li>
+                <div className="lectureListContainer">
                     {lecture && lecture.map(lecture => (
-						<li key={lecture.id}>
-							<Lecture title={lecture.title} professor={lecture.professor} semester={lecture.semester} id={lecture.id} key={lecture.id} />
-						</li>
-					))}
-					</li>
-				</ul>
-			</div>
+                        <Link to={`/lecture/${lecture.id}`}>
+                            <Lecture title={lecture.title} professor={lecture.professor} semester={lecture.semester} id={lecture.id} key={lecture.id} />
+                        </Link>
+                    ))}
+                </div>
+                <ul className="LectureList">
+                    {/* {lecture && lecture.map(lecture => (
+                            <li key={lecture.id}>
+                                <Link to={`/lecture/${lecture.id}`}>
+                                    <Lecture title={lecture.title} professor={lecture.professor} semester={lecture.semester} id={lecture.id} key={lecture.id} />
+                                </Link>
+                            </li>
+                        ))} */}
+                </ul>
+            </div>
             {/* {
                 isLoading ? <h1> 로딩중 </h1> :
                     <div className="folioContainer">

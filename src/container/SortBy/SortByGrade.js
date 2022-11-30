@@ -1,5 +1,5 @@
-import { useLocation, useNavigate, useParams } from "react-router-dom";
-import Lecture from "../../Component/Lecture/Lecture";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import Lecture from "../../Component/Lecture/Lecture copy";
 import useFetch from "../../Hook/useFetch";
 import "./SortByGrade.css";
 import { useEffect, useRef, useState } from "react";
@@ -90,23 +90,25 @@ export default function SortByGrade() {
 				</div>
 			</div>
 			<div className="LectureContainer">
-				{
-					lecture < 1
-						?
-						<div className="EmptyDataContainer">
-							<div className="labelWrapper">
-								<label>개설된 강의가 없습니다.</label>
+				<div className="testContainer">
+					{
+						lecture < 1
+							?
+							<div className="EmptyDataContainer">
+								<div className="labelWrapper">
+									<label>개설된 강의가 없습니다.</label>
+								</div>
 							</div>
-						</div>
-						:
-						<ul className="LectureList">
-							{lecture && lecture.map(lecture => (
-								<li key={lecture.id}>
-									<Lecture title={lecture.title} professor={lecture.professor} semester={lecture.semester} id={lecture.id} />
-								</li>
-							))}
-						</ul>
-				}
+							:
+							<div className="lectureListContainer">
+								{lecture && lecture.map(lecture => (
+									<Link to={`/lecture/${lecture.id}`}>
+										<Lecture title={lecture.title} professor={lecture.professor} semester={lecture.semester} id={lecture.id} />
+									</Link>
+								))}
+							</div>
+					}
+				</div>
 			</div>
 		</div>
 	)

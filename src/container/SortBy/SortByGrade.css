@@ -4,8 +4,11 @@
     justify-content: center;
 }
 
-.LectureContainer {
-    display: table-cell;
+.testContainer {
+    width: 980px;
+}
+
+.LectureContainer { 
     vertical-align: middle;
     display: flex;
     justify-content: center;
@@ -20,7 +23,7 @@
     text-align: center;
     -ms-text-align-last: center;
     -moz-text-align-last: center;
-    width: 1000px;
+    width: 900px;
 }
 
 .btnLookUp {

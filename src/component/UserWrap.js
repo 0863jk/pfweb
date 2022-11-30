@@ -1,4 +1,4 @@
-import "./Tag.css"
+import "./UserWrap.css"
 import styled from "styled-components";
 
 function Tag(props) {

@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/esm/Button";
 import { Link, useParams } from "react-router-dom";
 import useFetch from "../../Hook/useFetch";
-import "./LectureEdit.css";
+import "./LectureInfo.css";
 
 function OnClick() {
     console.log('clicked');

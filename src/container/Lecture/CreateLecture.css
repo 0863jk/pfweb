@@ -1,31 +1,28 @@
-.MainContainer {
-    background-color: white;
-    width: 100%;
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.container1 {
+    width: 800px;
+    justify-content: center;
+    text-align: center;
+}
+
+.mainContainer {
+    width: 800px;
+    display: flex;
+}
+
+.formContainer {
+    width: 800px;
+    margin: 10px auto;
+    display: inline-block;
 }
 
 .FormGroup {
-    margin-bottom: 10px;
-}
-
-.LabelWrapper {
-    width: 1200px;
-    margin: 0 auto;
-    margin-top: 30px;
-    padding-left: 1rem;
-}
-
-.LabelWrapper label {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.FormContainer {
-    margin-top: 30px;
-    display: table;
-    background-color: white;
-    width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px;
 }
 
 .SelectContainer {
@@ -42,24 +39,54 @@
     margin-left: 5px;
 }
 
-.BtnContainer {
-    text-align-last: center;
-    text-align: center;
-    -ms-text-align-last: center;
-    -moz-text-align-last: center;
+.selectedMember {
+    margin: 20px;
 }
 
-.SubmitBtnContainer {
-    text-align-last: center;
-    text-align: center;
-    -ms-text-align-last: center;
-    -moz-text-align-last: center;
+.ulSelectedMember li {
+    display: inline-block;
+    margin-bottom: 8px;
 }
 
-.BtnContainer Button {
-    width: 1200px;
+.parentsSubmit {
+    padding: 20px;
+    width: 500px;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all 0.3s;
+    font-weight: 700;
 }
 
-.LastFormGroup {
-    margin-bottom: 30px;
+
+ul.ks-cboxtags {
+    list-style: none;
+    padding: 20px;
+}
+
+ul.ks-cboxtags li {
+    display: inline;
+}
+
+ul.ks-cboxtags li label {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, .9);
+    border: 2px solid rgba(139, 139, 139, .3);
+    color: #adadad;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 3px 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .2s;
+}
+
+.btnSelectPart {
+    width: 100%;
+    padding: 8px;
 }

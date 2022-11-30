@@ -1,32 +1,20 @@
 .lecture {
-    margin: 5px;
+    margin: 15px;
     width: 1100px;
     height: 125px;
     background-color: rgb(239, 239, 239);
-}
-.info {
-    width: 85%;
     text-align: center;
     display: flex;
     justify-content: center;
-}
-
-.icon {
-    float: left;
-    overflow: hidden;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 15px;
+    border-radius: 15px;
 }
 
 .lectureInfo {
-    margin-top: auto;   
+    margin-top: auto;
     margin-bottom: auto;
-    margin-left: 15px;
 }
 
 .lectureName {
-    font-size: 20px;
     font-weight: bold;
 }
 
@@ -35,11 +23,5 @@
 }
 
 .lectureBtnContainer {
-    width: 15%;
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-.lectureBtnEdit {
-    margin-right: 5px;
+    width: 100px;
 }

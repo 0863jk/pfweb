@@ -4,7 +4,6 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import useFetch from '../../Hook/useFetch';
 import "./SearchUserModal.css";
-import Table from 'react-bootstrap/Table';
 
 function Popup({ open, setPopup, callback, setData }) {
     // const [dto, setDto] = useState({
@@ -20,7 +19,8 @@ function Popup({ open, setPopup, callback, setData }) {
     const [input, setInput] = useState([]);
 
     const handleClose = () => {
-        setData({input});
+        setData(input);
+        setInput([]);
         setPopup({ open: false });
         if (callback) {
             callback();
@@ -54,14 +54,17 @@ function Popup({ open, setPopup, callback, setData }) {
             setInput([...input, newUser]);
         } else if (target.checked === false) {
             const ul = document
-            .getElementById('selectedMembers');
+                .getElementById('selectedMembers');
             const items = document.getElementById(user.id);
+            console.log(items);
             if (items !== undefined) {
+                console.log(items);
                 items.remove();
                 setInput(input.filter(input => input.id !== user.id));
+            } else {
+                console.log(items);
             }
         }
-        console.log({input});
         setChecked(!bChecked);
         checkedItemHandler(target.value, target.checked);
     };
@@ -102,32 +105,18 @@ function Popup({ open, setPopup, callback, setData }) {
                 <Modal.Body>
                     <div className="bodyContainer">
                         <div className="searchContainer">
-                            <div className="formContainer">
+                            <div className="formSearchContainer">
                                 <Form.Control onChange={onChange} type="text" className="searchBar" name="memberSearch" placeholder="아이디, 이름, 학번으로 검색..." />
                             </div>
-                            <div className="itemContainer">
-                                <Table striped bordered hover size="sm">
-                                    <thead>
-                                        <tr>
-                                            <th>학번</th>
-                                            <th>이름</th>
-                                            <th>아이디</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {user && user.map(user => (
-                                            <tr>
-                                                <td>{user.schoolid}</td>
-                                                <td>{user.name}</td>
-                                                <td>{user.id}</td>
-                                                <td><input value={user.name} type="checkbox" onChange={(e) => checkHandler(e, {user})} /></td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </Table>
+                            <div className="memberContent">
+                                <ul className="ks-cboxtags">
+                                    {user && user.map(user => (
+                                        <li key={user.id}><input type="checkbox" id={user.schoolid} value={user.id} onChange={(e) => checkHandler(e, { user })} /><label htmlFor={user.schoolid}>{user.name} | {user.schoolid} | {user.id}</label></li>
+                                    ))}
+                                </ul>
                             </div>
-                            {/* {user.filter((item) => {
+                        </div>
+                        {/* {user.filter((item) => {
                                     if (list === "") {
                                         return item;
                                     }
@@ -144,13 +133,16 @@ function Popup({ open, setPopup, callback, setData }) {
                                     </div>
                                 ))
                                 } */}
-                        </div>
                         <div className="memberContainer">
-                            <label className="title">
-                                추가된 멤버
-                            </label>
-                            <ul id="selectedMembers">
-                            </ul>
+                            <div className="titleLabelContainer">
+                                <label className="title">
+                                    추가된 멤버
+                                </label>
+                            </div>
+                            <div className="selectedMemberContainer">
+                                <ul id="selectedMembers">
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </Modal.Body>

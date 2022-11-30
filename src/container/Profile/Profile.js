@@ -8,7 +8,7 @@ import useFetch from "../../Hook/useFetch";
 
 function Profile(props) {
     const [modalOpen, setModalOpen] = useState(false);
-    const lecture = useFetch(`http://localhost:3001/lecture?semesterId=1`);
+    const lecture = useFetch(`http://localhost:3001/lecture?semesterId=202202`);
 
     const openModal = () => {
         setModalOpen(true);
@@ -47,15 +47,11 @@ function Profile(props) {
                 <label>강의 목록</label>
             </div>
             <div className="LectureContainer">
-                <ul className="LectureList">
-                    <li>
-                        {lecture && lecture.map(lecture => (
-                            <li key={lecture.id}>
-                                <Lecture title={lecture.title} professor={lecture.professor} semester={lecture.semester} id={lecture.id} key={lecture.id} />
-                            </li>
-                        ))}
-                    </li>
-                </ul>
+                <div className="lectureListContainer">
+                    {lecture && lecture.map(lecture => (
+                        <Lecture title={lecture.title} professor={lecture.professor} semester={lecture.semester} id={lecture.id} key={lecture.id} />
+                    ))}
+                </div>
             </div>
         </div>
     )

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Main.css"
 import { Link } from 'react-router-dom';
-import Lecture from "../../Component/Lecture/Lecture copy.js";
+import Lecture from "../../Component/Lecture/Lecture.js";
 import useFetch from "../../Hook/useFetch";
 
 function Main() {
@@ -85,15 +85,6 @@ function Main() {
                         </Link>
                     ))}
                 </div>
-                <ul className="LectureList">
-                    {/* {lecture && lecture.map(lecture => (
-                            <li key={lecture.id}>
-                                <Link to={`/lecture/${lecture.id}`}>
-                                    <Lecture title={lecture.title} professor={lecture.professor} semester={lecture.semester} id={lecture.id} key={lecture.id} />
-                                </Link>
-                            </li>
-                        ))} */}
-                </ul>
             </div>
             {/* {
                 isLoading ? <h1> 로딩중 </h1> :

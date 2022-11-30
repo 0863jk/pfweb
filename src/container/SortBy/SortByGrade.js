@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
-import Lecture from "../../Component/Lecture/Lecture copy";
+import Lecture from "../../Component/Lecture/Lecture";
 import useFetch from "../../Hook/useFetch";
 import "./SortByGrade.css";
 import { useEffect, useRef, useState } from "react";

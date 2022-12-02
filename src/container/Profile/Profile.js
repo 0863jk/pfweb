@@ -7,18 +7,8 @@ import Lecture from "../../Component/Lecture/Lecture";
 import useFetch from "../../Hook/useFetch";
 
 function Profile(props) {
-    const [modalOpen, setModalOpen] = useState(false);
     const lecture = useFetch(`http://localhost:3001/lecture?semesterId=202202`);
-
-    const openModal = () => {
-        setModalOpen(true);
-        document.body.style.overflow = "hidden";
-    };
-    const closeModal = () => {
-        setModalOpen(false);
-        document.body.style.overflow = "unset"
-    };
-
+    const portfolio = useFetch(`http://localhost:3001/portfolio`);
 
     return (
         <div className="MainContainer">
@@ -34,12 +24,11 @@ function Profile(props) {
             </div>
             <div className="PortfolioWrapper">
                 <div className="Portfolios">
-                    <Portfolio title="Prototype Project Portfolio" summary="개요" />
-                    <Portfolio title="Prototype Project Portfolio" summary="개요" />
-                    <Portfolio title="Prototype Project Portfolio" summary="개요" />
-                    <Portfolio title="Prototype Project Portfolio" summary="개요" />
-                    <Portfolio title="Prototype Project Portfolio" summary="개요" />
-                    <Portfolio title="Prototype Project Portfolio" summary="개요" />
+                    {portfolio && portfolio.map(portfolio => (
+                        <Link to={`/portfolio/${portfolio.pfid}`}>
+                            <Portfolio title={portfolio.title} summary={portfolio.summary} />
+                        </Link>
+                    ))};
                 </div>
             </div>
             <div className="LabelWrapper">
@@ -49,7 +38,9 @@ function Profile(props) {
             <div className="LectureContainer">
                 <div className="lectureListContainer">
                     {lecture && lecture.map(lecture => (
-                        <Lecture title={lecture.title} professor={lecture.professor} semester={lecture.semester} id={lecture.id} key={lecture.id} />
+                        <Link to={`/lecture/${lecture.id}`}>
+                            <Lecture title={lecture.title} professor={lecture.professor} semester={lecture.semester} id={lecture.id} key={lecture.id} />
+                        </Link>
                     ))}
                 </div>
             </div>

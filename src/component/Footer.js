@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="Footer">
                 <hr></hr>
                 <div className="TextContext">
-                    <p>footer</p>
+                    <p>Copyright © 2022 ihcs pfweb. All rights reserved.</p>
                 </div>
             </div>
         </>

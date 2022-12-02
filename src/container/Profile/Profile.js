@@ -25,7 +25,7 @@ function Profile(props) {
             <div className="PortfolioWrapper">
                 <div className="Portfolios">
                     {portfolio && portfolio.map(portfolio => (
-                        <Link to={`/portfolio/${portfolio.pfid}`}>
+                        <Link to={`/portfolio/${portfolio.pfId}`}>
                             <Portfolio title={portfolio.title} summary={portfolio.summary} />
                         </Link>
                     ))};
